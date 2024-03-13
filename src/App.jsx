@@ -3,14 +3,15 @@ import { useEffect, useState } from 'react'
 function App() {
   const [data,setData] = useState('')
   useEffect(()=>{
-    fetch('http://localhost:5000/').then(res=>res.json()).then(res=>{
+    fetch('https://localhost:44382/api/Printer').then(res=>res.json()).then(res=>{
+      console.log(res);
       setData(res)
     })
   },[])
 
   return (
     <>
-      {data.message}
+      {data[1]}
     </>
   )
 }
