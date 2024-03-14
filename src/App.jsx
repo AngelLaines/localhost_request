@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 function App() {
   const [data,setData] = useState('')
   useEffect(()=>{
-    fetch('https://localhost:44382/api/Printer').then(res=>res.json()).then(res=>{
+    fetch('https://localhost:4300/api/Printer').then(res=>res.json()).then(res=>{
       console.log(res);
       setData(res)
     })
